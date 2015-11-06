@@ -2,6 +2,14 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
+
+
+
+
+link = Post.create( :title => "Salon Article",:url=> "http://www.salon.com/2015/11/06/the_bushes_eat_themselves_alive_daddy_tosses_w_to_the_wolverines_but_jeb_cannot_be_saved/")
+
+link = Post.create( :title => "TPM Article", :url=> "http://talkingpointsmemo.com/edblog/ignorance-and-arrogance
+")
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
