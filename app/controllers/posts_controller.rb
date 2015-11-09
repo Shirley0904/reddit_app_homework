@@ -5,8 +5,13 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-    unless Post.exists? (:url =>)
+    @posts.each do |post|
+      post.title
+    end
+render template: "posts/index"
+    #unless post.exists? (:url => "www.google.com")
   end
+
 
   # GET /posts/1
   # GET /posts/1.json
@@ -26,8 +31,10 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
-    respond_to do |format|
+    if @post.exists?
+      render template: "posts/new"
+    else
+      respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
@@ -37,7 +44,7 @@ class PostsController < ApplicationController
       end
     end
   end
-
+end
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update

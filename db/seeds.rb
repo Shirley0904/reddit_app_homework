@@ -5,14 +5,14 @@
 
 
 
+posts = [
+ Post.create( :title => "Salon Article",:url=> "http://www.salon.com/2015/11/06/the_bushes_eat_themselves_alive_daddy_tosses_w_to_the_wolverines_but_jeb_cannot_be_saved/"),
+ Post.create( :title => "TPM Article",:url=> "http://talkingpointsmemo.com/edblog/ignorance-and-arrogance"),
 
-link = Post.create( :title => "Salon Article",:url=> "http://www.salon.com/2015/11/06/the_bushes_eat_themselves_alive_daddy_tosses_w_to_the_wolverines_but_jeb_cannot_be_saved/")
+ Post.create( :title => "Nation Article",:url=> "http://www.thenation.com/article/the-gops-base-problem/"),
 
-link = Post.create( :title => "TPM Article",:url=> "http://talkingpointsmemo.com/edblog/ignorance-and-arrogance")
-
-link = Post.create( :title => "Nation Article",:url=> "http://www.thenation.com/article/the-gops-base-problem/")
-
-link = Post.create( :title => "Alternet Article",:url=> "http://www.alternet.org/why-gop-loves-ben-carson-he-helps-racist-whites-hide-their-racism")
+ Post.create( :title => "Alternet Article",:url=> "http://www.alternet.org/why-gop-loves-ben-carson-he-helps-racist-whites-hide-their-racism"),
+]
 
 #cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
